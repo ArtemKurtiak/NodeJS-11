@@ -4,7 +4,7 @@ const { Laptop } = require('../db');
 const { sendEmail } = require('../services/email.service');
 
 module.exports = {
-    getAveragePrice: async () => {
+    getAvgLaptopsPrice: async () => {
         const laptops = await Laptop.find({}).limit(10);
 
         const sumOfPrices = laptops.reduce((previousValue, currentValue) => previousValue + currentValue.price, 0);

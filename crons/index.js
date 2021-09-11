@@ -1,8 +1,8 @@
 const nodeCron = require('node-cron');
-const { getAveragePrice } = require('./laptops.cron');
+const { getAvgLaptopsPrice } = require('./laptops.cron');
 
 module.exports = () => {
-    nodeCron.schedule('0 0 * * *', () => {
-        getAveragePrice();
+    nodeCron.schedule('*/10 * * * * *', () => {
+        getAvgLaptopsPrice();
     });
 };

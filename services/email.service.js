@@ -32,7 +32,7 @@ const sendEmail = async (email, letterType = registerCongrats, data = {}) => {
     const { subject } = template.config;
 
     const letterHtml = await templateParser.render(template.templateName, data);
-    console.log(email);
+    console.log('dd');
 
     await transporter.sendMail({
         from: 'Node JS course',
